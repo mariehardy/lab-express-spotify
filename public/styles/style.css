@@ -1,0 +1,28 @@
+body {
+background-color: plum;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: wrap row;
+    /* width: 70%; */
+}
+
+.artist-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: wrap column;
+
+}
+
+img {
+    width: 150px;
+    height: auto;
+}
+
+.view-album-btn {
+    background-color: springgreen;
+
+}

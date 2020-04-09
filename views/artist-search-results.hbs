@@ -1,15 +1,53 @@
 {{!-- display name, image, and button (or link) --}}
 
+
+{{!-- <img src="{{firstImage}}" alt=""> --}}
+
+
+
 <div>
-{{artistArr.name}}
+
+
+    <ul>
+
+                    {{#each artistArr}}
+            
+
+        <li>
+            {{#each this.images}}
+                <img src="{{this.url}}" alt="">
+            {{/each}}
+            {{this.name}}
+            <a href="/albums/{{this.id}}" class="view-album-btn">View Albums</a>
+
+        </li>
+            {{/each}}
+
+    </ul>
+
 </div>
-{{!-- 
-<div>
-{{#each artistArr}}
-    {{this.name}}
-    {{#each this.images.url}}
-        <img src="{{this}}" alt="">
-    {{/each}}
-    <a href="{{this.href}}" class="button">Show Albums</a>
-{{/each}}
-</div> --}}
+
+
+
+
+{{!-- <div class="container">
+
+
+    <div class="artist-items">
+        <div>
+
+            {{#each artistArr}}
+
+            {{#each this.images}}
+            <img src="{{this.url}}" alt="">
+            {{/each}}
+
+            {{this.name}}
+            <a href="{{this.external_urls.spotify}}" class="button">View Albums</a>
+            {{/each}}
+
+        </div>
+
+    </div>
+
+</div>} --}}

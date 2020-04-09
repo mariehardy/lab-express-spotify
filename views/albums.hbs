@@ -1,0 +1,15 @@
+<div class="container">
+    <ul>
+        {{#each albumsArr}}
+        {{#each this.images}}
+
+        <li>
+            <img src="{{this.url}}" alt="">
+            {{/each}}
+            {{this.name}}
+
+        </li>
+        {{/each}}
+
+    </ul>
+</div>

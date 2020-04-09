@@ -6,25 +6,17 @@
 
 
 <div>
-
-
     <ul>
-
-                    {{#each artistArr}}
-            
-
+        {{#each artistArr}}
         <li>
-            {{#each this.images}}
-                <img src="{{this.url}}" alt="">
-            {{/each}}
+            {{#with this.images.[1]}}
+                <img src="{{url}}" alt="">
+            {{/with}}
             {{this.name}}
             <a href="/albums/{{this.id}}" class="view-album-btn">View Albums</a>
-
         </li>
             {{/each}}
-
     </ul>
-
 </div>
 
 

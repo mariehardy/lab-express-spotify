@@ -44,10 +44,11 @@ app.get('/artist-search', (req, res, next) => {
       .searchArtists(req.query.artistname)
       .then(data => {
         console.log('The received data from the API: ', data.body.artists.items);
-        // console.log('ACCESSING IMAGES: ', data.body.artists.items[0].images[0].url);
-        let firstImage = data.body.artists.items[0].images[0].url
+        // let firstImage = data.body.artists.items[0].images[0].url
+        console.log('IMAGES ARRAY OF OBJECT: ', data.body.artists.items[0].images);
+
         // console.log('firstImage: ', firstImage);
-        res.render('artist-search-results', { artistArr: data.body.artists.items, firstImage })
+        res.render('artist-search-results', { artistArr: data.body.artists.items, /* firstImage */ })
       })
       .catch(err => console.log('The error while searching artists occurred: ', err));
 

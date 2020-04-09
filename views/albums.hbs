@@ -1,15 +1,12 @@
 <div class="container">
     <ul>
         {{#each albumsArr}}
-        {{#each this.images}}
-
         <li>
-            <img src="{{this.url}}" alt="">
-            {{/each}}
+            {{#with this.images.[1]}}
+                <img src="{{url}}" alt="">
+            {{/with}}
             {{this.name}}
-
         </li>
         {{/each}}
-
     </ul>
 </div>
